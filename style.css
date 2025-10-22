@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    display: flex;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(253, 224, 229);
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* CSS reset */
+.nav {
+    background-color: pink;
+    font-size: 20px;
+    font-family: cursive;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.nav>ul {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+
+.nav>ul li:first-child {
+    margin-right: auto;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: rgb(197, 100, 116);
+    box-shadow: 0px 5px 10px;
+}
+
+.nav a:hover {
+    background-color: white;
+    transition: 500ms;
+}
+
+@media (max-width: 750px) {
+    .nav {
+        font-size: 16px;
+        /* mindre tekst på små skjermer */
+    }
+
+    .nav>ul {
+        gap: 15px;
+        /* reduser mellomrommet litt */
+    }
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(197, 100, 116);
+}
+
+.intro>h1 {
+    font-weight: bold;
+}
+
+main>h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#hovedbildet {
+    width: 300px;
+    object-fit: cover;
+    border: 5px solid rgb(197, 100, 116);
+    border-radius: 10px;
+}
+
+.facts {
+    display: flex;
+    gap: 50px;
+    padding: 40px 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.facts>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-left: 40px;
+    box-shadow: 0px 5px 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    gap: 10px
+}
+
+.family-section {
+    padding: 20px;
+    background-color: rgb(197, 100, 116);
+    color: white;
+}
+
+.family-section>h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.family-grid {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.family-card {
+    text-align: center;
+}
+
+.family-card img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.boliger {
+    text-align: center;
+    background-color: rgb(253, 224, 229);
+    padding: 20px;
+}
+
+.boliger>h1 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.bolig-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bolig-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid rgb(197, 100, 116);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+.hus {
+    flex: 2;
+}
+
+.hytta,
+.leilighet {
+    flex: 1;
+}
+
+.bolig-container img {
+    object-fit: cover;
+    height: 300px;
+}
+
+.timeplan-container {
+    display: flex;
+    max-width: 800px;
+    margin: 0px auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.bolig-container h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+@media (width < 800px) {
+
+    .hus,
+    .hytta,
+    .leilighet {
+        flex: 100%;
+    }
+}
+
+table {
+    border: 5px solid rgb(197, 100, 116);
+    border-collapse: collapse;
+    table-layout: fixed;
+    background-color: pink;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid rgb(197, 100, 116);
+    text-align: center;
+    padding: 20px;
+}
+
+.timeplan-container>h1 {
+    text-align: center;
+    padding: 20px;
+
+}
+
+@media (width<1100px) {
+
+    td,
+    th {
+        padding: 10px;
+    }
+}
+
+@media (width<870px) {
+
+    td,
+    th {
+        padding: 0;
+    }
+}
+
+@media (width<670px) {
+
+    th,
+    td {
+        font-size: 10px;
+    }
+}
+
+.IT {
+    background-color: rgb(251, 231, 235);
+}
+
+.Spansk {
+    background-color: rgb(247, 138, 156);
+}
+
+.Kjemi {
+    background-color: rgb(250, 102, 127);
+}
+
+.R1 {
+    background-color: rgb(228, 109, 129);
+}
+
+.Fysikk {
+    background-color: rgb(189, 79, 97);
+}
+
+.Norsk {
+    background-color: rgb(243, 71, 100);
+}
+
+.Historie {
+    background-color: rgb(222, 105, 124);
+}
+
+.Kroppsøving {
+    background-color: rgb(255, 172, 188);
+}
+
+.Klassens_time {
+    background-color: rgb(255, 139, 159);
+}
+
+.bilde-grid {
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 16px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 600px;
+}
+
+.bilde-grid>img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bilde-grid-col-2 {
+    grid-column: span 2;
+}
+
+.bilde-grid-row-2 {
+    grid-row: span 2;
+}
+
+@media (width < 1000px) {
+    .bilde-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 500px;
+    }
+}
+
+@media (width < 700px) {
+    .bilde-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 400px;
+    }
+}
+
+.footer {
+    background-color: pink;
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer>* {
+    padding: 10px;
+}
